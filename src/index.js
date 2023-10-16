@@ -1,7 +1,7 @@
 import { pixabayApi } from './js/api-service';
 import { MarkUpInterface } from './js/interface-service';
 
-let totalImg = 0; //saved value "how many img founded"
+let totalImg = 0;
 
 const ref = {
   form: '.search-form',
@@ -16,7 +16,6 @@ interFace.form.addEventListener('submit', onShowResult);
 interFace.buttonMore.addEventListener('click', loadMorelResult);
 interFace.checkBox.addEventListener('change', switchInfiniteScroll);
 
-//switchOn or switchOff infinite scroll
 function switchInfiniteScroll(evt) {
   const { checked } = evt.currentTarget;
 
@@ -31,7 +30,6 @@ function switchInfiniteScroll(evt) {
   }
 }
 
-//First download images
 function onShowResult(evt) {
   evt.preventDefault();
   interFace.hiddenButtonLoadMore();
